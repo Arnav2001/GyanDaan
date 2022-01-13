@@ -1,0 +1,3 @@
+include ':build.gradle'
+include ':commonlib'
+include ':mobilertc'

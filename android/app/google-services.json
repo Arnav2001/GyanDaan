@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "43097681319",
+    "project_id": "gyandaan-f1477",
+    "storage_bucket": "gyandaan-f1477.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:43097681319:android:d0eea75374a1cf03e0da82",
+        "android_client_info": {
+          "package_name": "com.hackathon.hackathon_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "43097681319-p0o83f2i8352n4u9glcrgkfqn0f8chqi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRhd_hlo6Uvu2EM72qjE0LNfatlF1Pa00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "43097681319-p0o83f2i8352n4u9glcrgkfqn0f8chqi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
