@@ -1,3 +1,6 @@
+//mentor form screen 2
+
+
 import 'package:flutter/material.dart';
 import 'package:hackathon_project/allList.dart';
 import 'package:hackathon_project/formDetails.dart';
@@ -261,7 +264,7 @@ class _mentorForm2State extends State<mentorForm2>
       ),
     );
   }
-
+  //widget for subject selection
   Widget subjectChoice(BuildContext context){
     var _w = MediaQuery.of(context).size.width;
     return Container(
@@ -290,6 +293,7 @@ class _mentorForm2State extends State<mentorForm2>
           }),
     );
   }
+  //topic choice selection
   Widget topicChoice(BuildContext context, String sub,){
     List listy=[];
     var _w = MediaQuery.of(context).size.width;

@@ -1,3 +1,6 @@
+// signIn signUp forgot screen
+
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
@@ -38,6 +41,7 @@ class _CircularParticleScreen2State extends State<CircularParticleScreen2> with 
   String _reEnterPassword;
   final auth = FirebaseAuth.instance;
 
+  //animation controllers
   @override
   void initState() {
     _controller = AnimationController(
@@ -368,6 +372,7 @@ class _CircularParticleScreen2State extends State<CircularParticleScreen2> with 
       ),
     );
   }
+  //other textfield widget
   Widget component1(
       IconData icon, String hintText, bool isPassword, bool isEmail) {
     Size size = MediaQuery.of(context).size;
@@ -412,6 +417,7 @@ class _CircularParticleScreen2State extends State<CircularParticleScreen2> with 
       ),
     );
   }
+  //button widget
   Widget component2(String string, double width, VoidCallback voidCallback) {
     Size size = MediaQuery.of(context).size;
     return InkWell(
@@ -439,7 +445,7 @@ class _CircularParticleScreen2State extends State<CircularParticleScreen2> with 
       ),
     );
   }
-
+//widget for reenter password
   Widget component3(
       IconData icon, String hintText, bool isPassword, bool isNumber) {
     Size size = MediaQuery.of(context).size;
@@ -480,6 +486,7 @@ class _CircularParticleScreen2State extends State<CircularParticleScreen2> with 
       ),
     );
   }
+  //signIn backend
   signIn(String _email,String _password) async{
     bool isVerified ;
     Navigator.of(context).popUntil((route) => route.isFirst);
@@ -516,6 +523,7 @@ class _CircularParticleScreen2State extends State<CircularParticleScreen2> with 
 
     }
   }
+  //forgot backend
   forgotPassword()async{
     if(_email == null){
       Toast.show('Invalid Input',context,gravity: Toast.TOP,duration: Toast.LENGTH_SHORT);
@@ -532,6 +540,7 @@ class _CircularParticleScreen2State extends State<CircularParticleScreen2> with 
       }
     }
   }
+  //signup backend
   signUp(String _email,String _password) async{
     if(_email == null || _password == null ||_name == null ||number ==null || _reEnterPassword == null){
       Toast.show('Fill All Entries',context,gravity: Toast.TOP,duration: Toast.LENGTH_SHORT);

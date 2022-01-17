@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+
+//sending form details to firebase
 class FormDetails{
   Details(Map mapx,List listx,BuildContext context,String name,String post,List days) async {
     final firestoreInstance = FirebaseFirestore.instance;

@@ -1,6 +1,8 @@
+//mentor form screen 3
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hackathon_project/MentorHome.dart';
 import 'package:hackathon_project/formDetails.dart';
 import 'package:hackathon_project/loading.dart';
 import 'dart:ui';
@@ -234,6 +236,8 @@ class _mentorForm3State extends State<mentorForm3>
       ),
     );
   }
+
+  //number of hours widget
   Widget hourFun(BuildContext context){
     Size size = MediaQuery.of(context).size;
     return Container(
@@ -262,7 +266,7 @@ class _mentorForm3State extends State<mentorForm3>
             }
           ));
   }
-
+// daycheck widget
   Widget DayFinder(int i,String string, Color color){
     return GestureDetector(
       onTap: (){

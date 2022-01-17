@@ -1,5 +1,6 @@
 import "package:cloud_firestore/cloud_firestore.dart";
 
+//firebase database connection
 class DatabaseService {
   final String uid;
   DatabaseService({this.uid});

@@ -1,9 +1,10 @@
+//student form 3
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hackathon_project/connection.dart';
 import 'package:hackathon_project/formDetails.dart';
-import 'package:hackathon_project/homePage.dart';
-import 'package:hackathon_project/loading.dart';
 import 'dart:ui';
 
 import 'package:toast/toast.dart';
@@ -226,6 +227,8 @@ class _studentForm3State extends State<studentForm3>
       ),
     );
   }
+
+  //time taker
   TimeOfDay time = const TimeOfDay(hour: 12, minute: 12);
   Widget timeFun(BuildContext context){
     double _w = MediaQuery.of(context).size.width;
@@ -252,6 +255,8 @@ class _studentForm3State extends State<studentForm3>
     );
   }
 
+
+  //day checker
   Widget DayFinder(int i,String string, Color color){
     return GestureDetector(
       onTap: (){

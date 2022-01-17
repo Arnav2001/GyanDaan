@@ -10,6 +10,7 @@ import 'package:jitsi_meet/jitsi_meet.dart';
 import 'package:hackathon_project/allList.dart';
 import 'package:hackathon_project/profile.dart';
 
+//student homepage
 
 class HomePage extends StatefulWidget {
 
@@ -85,6 +86,7 @@ class _HomePageState extends State<HomePage>
 
   @override
   Widget build(BuildContext context) {
+    //days of student
     for(int i=0;i<_choosenDay.length;i++){
       if(!_choosenDay[i]){
         setState(() {
@@ -93,6 +95,7 @@ class _HomePageState extends State<HomePage>
       }
     }
     retrievingData();
+    //status bar styling
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.dark,
@@ -437,6 +440,7 @@ class _HomePageState extends State<HomePage>
       ),
     );
   }
+  //backend for retrieving data
   retrievingData(){
     final firestoreInstance = FirebaseFirestore.instance;
     var firebaseUser = FirebaseAuth.instance.currentUser;
@@ -454,6 +458,7 @@ class _HomePageState extends State<HomePage>
       });
     });
   }
+  //backend for joining meeting
   _joinMeeting(String TopicName) async {
     String serverUrl = serverText.text.trim().isEmpty ? null : serverText.text;
     Map<FeatureFlagEnum, bool> featureFlags = {

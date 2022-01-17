@@ -1,3 +1,5 @@
+//connection of student with mentor
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -26,42 +28,40 @@ class Connection {
     List studentDays = new List();
     List<List<int>> dayMentors =  List();
     Map<String,List<String>> finalMentor={ };
+    //collecting every topic of student
     for(String x in _topicMap.keys){
       if(_topicMap[x]==true){
         studentTopics.add(x);
       }
     }
-    //print('student topics........ $studentTopics');
+
+    //finding all mentors
     for(int i=0;i<allData.length;i++){
       if(allData[i]["post"]=="Mentor"){
       allMentors.add(i);}
     }
-    //print('Mentor.......$allMentors');
+
+    //finding mentors expert in topics according to students topic preference
     for(String x in studentTopics){
       List<int> temp = List();
-      //print('topicMentorss......$x');
       for(int i in allMentors){
-
-        //print('topicMentorss......$i');
         if(allData[i]["topics"][x] ==true){
 
-          //print('topicMentorss......${allData[i]["topics"][x]}');
           temp.add(i);
-          //topicMentors[ind].add(i);
-
         }
       }
       topicMentors.add(temp);
 
     }
-    //print('topicMentorsssss......$topicMentors');
+
+    //finding student days
     for(int i=1;i<_days.length;i++){
       if(!_days[i]){
         studentDays.add(i);
       }
     }
 
-   // print('studentDays......${studentDays}');
+   // finding mentor days
 
     dayMentors.add([-1]);
     for(int j=1;j<_days.length;j++){
@@ -76,10 +76,10 @@ class Connection {
       }
       dayMentors.add(temp);
     }
-    //print('DayMentors........$dayMentors');
+
+    //finding mentors according to days of student and topics
 
       for(int i=0;i<topicMentors.length;i++){
-
         List<String> nestedList =  List();
         for(int j in studentDays){
           List<int> temp = List();
@@ -91,6 +91,7 @@ class Connection {
           if(temp.isEmpty){
             temp.add(-1);
           }
+          //if there  are more than 1 mentor for teaching 1topic at same day then we are randomly allocating mentor for that day
           final random = new Random();
           int index = random.nextInt(temp.length);
           nestedList.add(allData[temp[index]]["name"]);

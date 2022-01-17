@@ -1,3 +1,5 @@
+//splash screen or 1st screen which will come when anyone will open app for 1st time
+
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:hackathon_project/CircularParticleScreen.dart';

@@ -1,3 +1,5 @@
+//loading screen when data is being retrieved from database
+
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -28,6 +30,7 @@ class Loading extends StatelessWidget {
       ),
     );
   }
+
   retrievingData(BuildContext context){
     final firestoreInstance = FirebaseFirestore.instance;
     var firebaseUser = FirebaseAuth.instance.currentUser;

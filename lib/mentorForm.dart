@@ -1,3 +1,6 @@
+//mentor form 1 page
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hackathon_project/formDetails.dart';
@@ -225,7 +228,7 @@ class _mentorFormState extends State<mentorForm>
       ),
     );
   }
-
+  //checkbox with data and different color widget
   Widget homePageCard(int i,Color color, String title,
       BuildContext context) {
     double _w = MediaQuery.of(context).size.width;
@@ -259,7 +262,6 @@ class _mentorFormState extends State<mentorForm>
                   child: Center(
                     child: CheckboxListTile(
                       title: Text(title),
-                      //secondary: Icon(Icons.beach_access),
                       controlAffinity: ListTileControlAffinity.leading,
                       checkColor: Colors.black,
                       activeColor: Colors.white,

@@ -1,3 +1,6 @@
+//student form 2
+
+
 import 'package:flutter/material.dart';
 import 'package:hackathon_project/allList.dart';
 import 'package:hackathon_project/formDetails.dart';
@@ -261,7 +264,7 @@ class _studentForm2State extends State<studentForm2>
       ),
     );
   }
-
+//showing subjects
   Widget subjectChoice(BuildContext context){
     var _w = MediaQuery.of(context).size.width;
     return Container(
@@ -290,6 +293,8 @@ class _studentForm2State extends State<studentForm2>
           }),
     );
   }
+
+  //showing subjects and collecting topics
   Widget topicChoice(BuildContext context, String sub,){
     List listy=[];
     var _w = MediaQuery.of(context).size.width;
@@ -324,6 +329,7 @@ class _studentForm2State extends State<studentForm2>
     );
 
   }
+  //marking value of particular topic as true if selected
   bool logic(){
     for(String i in CheckBoxValue.keys){
       if(CheckBoxValue[i]==true){

@@ -1,3 +1,6 @@
+//student form screen 1
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hackathon_project/formDetails.dart';
@@ -226,7 +229,7 @@ class _studentFormState extends State<studentForm>
       ),
     );
   }
-
+//selecting subjects
   Widget homePageCard(int i,Color color, String title,
       BuildContext context) {
     double _w = MediaQuery.of(context).size.width;

@@ -31,6 +31,7 @@ class allList{
     Colors.purpleAccent.shade200,
     Colors.deepPurpleAccent.shade200,
   ];
+  //list of topics in particular subject
   List Maths = [
     "Number Systems",
     "Algebra",
@@ -40,7 +41,6 @@ class allList{
     "Statistics",
     "Probability",
   ];
-  //39
   List Science = [
     "Chemical Substances",
     "World of Living",
@@ -85,6 +85,7 @@ class allList{
   Map<String,bool>CheckBoxValue = { };
   List<String> allTopics= new List();
 
+//making map of topics and if student wants it
   mapFormation(){
     for(var x in Maths){
       CheckBoxValue.putIfAbsent(x, () => false);

@@ -1,3 +1,7 @@
+//verify Screen after signup
+
+
+
 import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -76,7 +80,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
       )
     );
   }
-
+//checking Email verification
   Future <void> checkEmailVerified() async {
     user = auth.currentUser;
     await user.reload();
