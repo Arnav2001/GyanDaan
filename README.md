@@ -1,5 +1,3 @@
-Apologies for the misunderstanding. Here's an updated version of the README file for a Flutter application called GyanDaan:
-
 # GyanDaan
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
